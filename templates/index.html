@@ -1,0 +1,37 @@
+<head>
+    <title>Calculator</title>
+    <script src="../static/add.js" type="text/javascript"></script>
+    <script src="../static/checkValue.js" type="text/javascript"></script>
+</head>
+<body>
+    <div align="center" style="margin-top:40px;"> <!--中心对齐，距离顶部40像素-->
+       <p>{{message}}</p>
+        <img src="../static/add.png">
+    </div>
+    <div align="center" style="margin-top:40px"> <!--这块的顶部是add.png，所以距离图片40像素-->
+            <form name="form1" method="POST"><!--            {{message}}-->
+            <input type="text" placeholder="adder-1"name="adder1">+
+            <input type="text" placeholder="adder-2" name="adder2">=
+            <input type="text" placeholder="result" readonly="readonly" name="result" value="{{message}}">
+            <input type="submit" value="计算" onclick="add()"> <!--调用add.js中的add函数-->
+        </form>
+    </div>
+    <div>
+        <form name="form2">
+            <input type="text" placeholder="text"name="text1">
+            <textarea placeholder="Textarea" name="textarea" style="resize: none"></textarea><!--resize: none表示不能拖动改变大小-->
+            <input type="file" name="file"><!--文件选择-->
+            <input type="radio" name="Option" value="Option1">选项1<!--单选框 选框用同一个name，不然是独立的不会产生联系-->
+            <input type="radio" name="Option" value="Option2">选项2
+            <input type="checkbox" name="check" value="Option3">多选1<!--多选框-->
+            <input type="checkbox" name="check" value="Option4">多选2
+            <input type="submit" value="提交"><!--提交类的按钮，会将表单提交到服务器-->
+            <input type="reset" value="重置"><!--重置类按钮，会清除当前表单内输入信息-->
+            <input type="button" value="普通按钮" onclick="getValue()">
+        </form>
+
+    </div>
+</body>
+<footer></footer>
+<!---->
+
